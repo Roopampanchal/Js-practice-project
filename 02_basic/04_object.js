@@ -90,5 +90,47 @@ Users[1].email
 //   [ '2', { id: 3, email: 'a@gmail.com' } ]
 // ]
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 //true
+
+//DeStructuring
+
+const course = {
+    coursename: "Js in Hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// console.log(course.courseInstructor);
+//hitesh
+
+// Destructuring the course
+// =============================
+
+// const {courseInstructor} = course;
+
+// console.log(course.courseInstructor);
+//hitesh
+
+//Make it more short form
+
+const {courseInstructor: instructor} = course;
+console.log(instructor);
+//hitesh
+
+// API concepts
+// =================
+
+// we get response as json file
+
+// {
+    // name: "hitesh",
+    // coursename:"Js in hindi",
+    // price:"free"
+// }
+
+// or [
+//     {
+
+//     }
+// ]
