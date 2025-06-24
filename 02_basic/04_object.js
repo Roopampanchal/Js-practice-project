@@ -43,10 +43,10 @@ const obj3 = {...obj1, ...obj2, ...obj4};
 // console.log(obj3);
 
 
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
 
-const returnedTarget = Object.assign({}, target, source);
+// const returnedTarget = Object.assign({}, target, source);
 
 // console.log(target);
 // // Expected output: Object { a: 1, b: 4, c: 5 }
@@ -134,3 +134,13 @@ console.log(instructor);
 
 //     }
 // ]
+
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);

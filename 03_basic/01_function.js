@@ -72,3 +72,52 @@ function loginUserMessage(username = "Sam"){ // Never undefined
 // console.log(loginUserMessage());//Sam just logged in
 console.log(loginUserMessage("Hitesh")); //Hitesh just logged in 
 //Please note when we give argument then it will overlap the default value
+
+function square(number) {
+  return number * number;
+}
+
+console.log(square(5));
+
+// When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function, as shown in the following example:
+
+function myFun(myObj){
+    myObj.make = "Toyota";
+}
+
+let myObj = {};            // Step 1: Create an object
+myFun(myObj);              // Step 2: Pass the object to the function
+// console.log(myObj.make);   // Step 3: Access the updated property => "Toyota"
+
+const car={
+    make:"Porche",
+    price:"3Cr",
+}
+
+console.log(car.make);   // Step 3: Access the updated property => "Porche"
+myFun(car);              // Step 2: Pass the "car" object to the function
+console.log(car.make);   // Step 3: Access the updated property => "Toyota"
+
+// When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
+
+function myArray(arrInFun){
+    arrInFun[0] = 30;
+}
+
+const newArr = [45];
+console.log(newArr[0]);//45
+
+myArray(newArr);
+console.log(newArr[0]);//30
+
+// Function declarations and expressions can be nested, which forms a scope chain. For example:
+
+function addSquare(a, b){
+    function square(x){
+        return x*x;
+    }
+    return square(a) + square(b);
+}
+
+console.log(addSquare(5));
+
